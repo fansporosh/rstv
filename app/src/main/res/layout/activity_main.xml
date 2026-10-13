@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#080C14">
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true"
+        android:focusable="true" android:clickable="true"
+        android:background="#080C14" />
+    <TextView android:id="@+id/statusText" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center"
+        android:text="Connecting to Rsporosh TV…" android:textSize="18sp"
+        android:textColor="#FFFFFF" android:gravity="center" android:padding="24dp" />
+    <Button android:id="@+id/settingsButton" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="top|end"
+        android:layout_margin="12dp" android:text="⚙ Settings"
+        android:contentDescription="Open settings" />
+    <LinearLayout android:id="@+id/settingsPanel" android:orientation="vertical"
+        android:layout_width="400dp" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:padding="24dp"
+        android:background="@drawable/panel_background" android:visibility="gone">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="RSPOROSH TV" android:textColor="#FFFFFF"
+            android:textStyle="bold" android:textSize="24sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Live television • HLS" android:textColor="#CCD6E5"
+            android:layout_marginBottom="14dp" android:textSize="14sp" />
+        <Button android:id="@+id/retryButton" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Reconnect Live TV" />
+        <CheckBox android:id="@+id/autoStartCheck" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Request start after device boot"
+            android:textColor="#FFFFFF" android:buttonTint="#F44336" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Auto-start requires supported TV-box firmware, kiosk or launcher setup on modern Android. This switch alone cannot guarantee it."
+            android:textColor="#CCD6E5" android:textSize="12sp" />
+        <Button android:id="@+id/closeSettingsButton" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Close" />
+    </LinearLayout>
+</FrameLayout>
