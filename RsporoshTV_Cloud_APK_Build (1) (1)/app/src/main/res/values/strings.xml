@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Rsporosh TV</string>
+    <string name="connecting">Connecting to Rsporosh TV…</string>
+    <string name="buffering">Loading live television…</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="retrying">Retrying in</string>
+</resources>
